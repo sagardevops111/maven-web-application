@@ -38,4 +38,11 @@ sshagent(['53449ec8-9f6a-4f95-a8f3-a9263f87e2cb']) {
 
 }
 */
+stage('SendEmailNotification')
+{
+emailext body: '''Build over
+
+regards
+sagar''', subject: 'Build  over', to: 'sgrmane@gmail.com'
+}
 }
