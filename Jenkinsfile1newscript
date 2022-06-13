@@ -11,6 +11,7 @@ echo "Build number is:${env.BUILD_NUMBER}"
 
 try
 {
+sendslacknotification('STARTED')
 stage('CheckoutCode')
 {
 git branch: 'development', credentialsId: 'fca1e27a-87d4-4a96-b365-d784613b127a', url: 
