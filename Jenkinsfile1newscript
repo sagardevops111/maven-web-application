@@ -11,7 +11,6 @@ echo "Build number is:${env.BUILD_NUMBER}"
 
 try
 {
-
 stage('CheckoutCode')
 {
 git branch: 'development', credentialsId: 'fca1e27a-87d4-4a96-b365-d784613b127a', url: 
@@ -41,7 +40,7 @@ sshagent(['53449ec8-9f6a-4f95-a8f3-a9263f87e2cb']) {
 }
 
 } //try close
-catch(e)
+catch (e)
 {
 currentBuild.result = "FAILED"
 throw e
